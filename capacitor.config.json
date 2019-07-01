@@ -1,0 +1,7 @@
+{
+  "appId": "com.kartiknair.bookstore",
+  "appName": "Ionic Bookstore",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

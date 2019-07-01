@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ book.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content center text-center>
+  <img [src]="book.book_image" alt="Book Cover" />
+  <ion-card-title>{{ book.title }}</ion-card-title>
+  <ion-card-subtitle>{{ book.author }}</ion-card-subtitle>
+  <ion-card-content>
+    {{ book.description }}
+  </ion-card-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Want to purchase?</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let link of book.buy_links">
+      <ion-label
+        ><a [href]="link.url">{{ link.name }}</a></ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>

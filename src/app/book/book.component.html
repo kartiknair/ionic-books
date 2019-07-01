@@ -1,0 +1,9 @@
+<div>
+  <img [src]="book.book_image" alt="Book Cover" />
+  <div class="book-info">
+    <ion-card-title>{{ book.title }}</ion-card-title>
+    <ion-button fill="clear" (click)="openModal(book)" class="more-btn"
+      ><ion-icon name="more" class="icon"></ion-icon
+    ></ion-button>
+  </div>
+</div>
